@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.MaintenanceDAO;
 import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.MaintenanceModel;
 
-public class MaintenanceServiceImpl {
+public class MaintenanceServiceImpl implements MaintenanceService{
 	
 	
 	@Autowired
 	@Qualifier("MaintenanceDAO")
 	MaintenanceDAO maintenanceDAO;
 	
-public void maintenanceRecord(){
+	public void maintenanceRecord(){
 		
 		MaintenanceModel maintenance = new MaintenanceModel();
 		maintenance.setDamageDescription("sfw");

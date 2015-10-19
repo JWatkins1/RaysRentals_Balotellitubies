@@ -17,9 +17,9 @@ public class MaintenanceController {
 	MaintenanceService maintenanceService;
 
 	@RequestMapping("/maintenance")
-	public ModelAndView Bikes() {
+	public ModelAndView Maintenance() {
 
-		maintenanceService.maintanenceRecord();
+		maintenanceService.maintenanceRecord();
 		ModelAndView mv = new ModelAndView("simpleforms/maintenance");
 		return mv;
 	}
