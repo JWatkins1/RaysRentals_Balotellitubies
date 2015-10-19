@@ -13,6 +13,8 @@
         ">
 
 	<context:component-scan base-package="uk.co.brightfuture.RaysRentals_Balotellitubies" />
+	<context:component-scan base-package="uk.co.brightfuture.RaysRentals_Balotellitubies.Model" />
+	<context:component-scan base-package="uk.co.brightfuture.RaysRentals_Balotellitubies.Services" />
 	<mvc:annotation-driven />
 
 

@@ -1,33 +1,29 @@
-package uk.co.brightfuture.RaysRentals_Balotellitubies;
+package uk.co.brightfuture.RaysRentals_Balotellitubies.Services;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.joda.time.DateTime;
+import org.joda.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.BikesDAO;
 import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.BikesModel;
 
-public class BikesDAO implements Bikes {
-
-	@Autowired
-	@Qualifier("sessionFactory")
-	public SessionFactory sessionFactory;
+public class BikesServiceImpl implements BikesService{
 	
-	public void bikes(String name) {
-		
-		Session session = sessionFactory.openSession();
+	@Autowired
+	@Qualifier("BikesDAO")
+	BikesDAO bikesDAO;
+	
+	public void saveBikes(){
 		
 		BikesModel bikes = new BikesModel();
-		bikes.setName(name);
+		bikes.setName("Yamaha");
 		bikes.setBikeType("BMX");
 		bikes.setCost(200);
-		bikes.setDate(new DateTime());
+		bikes.setDate(new LocalDateTime());
 		bikes.setManufacturerVersion(1);
 		bikes.setSize(15);
 		bikes.setStatus("Available");
-		
-		session.save(bikes);
-		
-	}
+		bikesDAO.bikes(bikes);
+	}		
 }

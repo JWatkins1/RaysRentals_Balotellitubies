@@ -33,8 +33,8 @@ public class BikesModel implements Serializable {
 	private int manufacturerVersion;
 	
 	@Column(name = "purchase_date")
-	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
-	private DateTime date;
+	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDateTime")
+	private LocalDateTime date;
 	
 	@Column(name = "cost_of_bike")
 	private int cost;
@@ -56,12 +56,12 @@ public class BikesModel implements Serializable {
 		this.manufacturerVersion = manufacturerVersion;
 	}
 
-	public DateTime getDate() {
+	public LocalDateTime getDate() {
 		return date;
 	}
 
-	public void setDate(DateTime dateTime) {
-		this.date = dateTime;
+	public void setDate(LocalDateTime localDateTime) {
+		this.date = localDateTime;
 	}
 
 	public int getCost() {

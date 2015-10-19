@@ -10,20 +10,22 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
 	<!-- Scan for spring annotated components -->
-	<context:component-scan base-package="uk.co.brightfuture.RaysRentals_Balotellitubies"/>
-	
+	<context:component-scan base-package="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller, uk.co.brightfuture.RaysRentals_Balotellitubies.Services, uk.co.brightfuture.RaysRentals_Balotellitubies.Model, uk.co.brightfuture.RaysRentals_Balotellitubies.DAO"/>
 	<!-- Process annotations on registered beans like @Autowired -->
 	<context:annotation-config/>
 	
 	
 
 	<import resource="config-ds.xml"/>
-
-	<bean name="BikesDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.BikesDAO" />
+	
+	<bean name="BikesDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.BikesDAO" />
+	<bean name="BikesServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.BikesServiceImpl" />
+	<bean name="bikesController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.BikesController" />
 	
 	<bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+	
 		<property name="dataSource" ref="addressDataSource" />
-		<property name="packagesToScan" value="uk.co.brightfuture.RaysRentals_Balotellitubies"/>
+		<property name="packagesToScan" value="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller, uk.co.brightfuture.RaysRentals_Balotellitubies.Services, uk.co.brightfuture.RaysRentals_Balotellitubies.Model "/>
 		<property name="namingStrategy" >
 			<bean class="org.hibernate.cfg.ImprovedNamingStrategy"/>
 		</property>
