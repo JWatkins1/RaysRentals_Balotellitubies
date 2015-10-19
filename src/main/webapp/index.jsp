@@ -6,7 +6,8 @@ Click the link to start the app
 <br>
 <br>
 <br/>
-<a href="smvc//bikes">Address Book</a>
+<a href="smvc//bikes">Bikes</a>
+<a href="smvc//maintenance">Maintenance</a>
 
 
 </body>
