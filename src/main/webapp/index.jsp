@@ -9,6 +9,7 @@ Click the link to start the app
 <a href="smvc//bikes">Bikes</a>
 <a href="smvc//maintenance">Maintenance</a>
 <a href="smvc//customer">Customer</a>
+<a href="smvc//servicing">Servicing</a>
 
 
 </body>
