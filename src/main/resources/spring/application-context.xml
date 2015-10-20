@@ -26,6 +26,10 @@
 	<bean name="MaintenanceServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.MaintenanceServiceImpl" />
 	<bean name="maintenanceController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.MaintenanceController" />
 	
+	<bean name="CustomerDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.CustomerDAO" />
+	<bean name="CustomerServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.CustomerServiceImpl" />
+	<bean name="CustomerController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.CustomerController" />
+	
 	<bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 	
 		<property name="dataSource" ref="addressDataSource" />
