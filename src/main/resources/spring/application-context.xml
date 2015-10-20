@@ -22,6 +22,8 @@
 	<bean name="BikesServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.BikesServiceImpl" />
 	<bean name="bikesController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.BikesController" />
 	
+	<bean name="DashboardController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.DashboardController" />
+	
 	<bean name="MaintenanceDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.MaintenanceDAO" />
 	<bean name="MaintenanceServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.MaintenanceServiceImpl" />
 	<bean name="maintenanceController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.MaintenanceController" />

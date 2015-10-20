@@ -2,7 +2,6 @@ package uk.co.brightfuture.RaysRentals_Balotellitubies.DAO;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 

@@ -1,4 +1,4 @@
-package uk.co.brightfuture.RaysRentals_Balotellitubies;
+package uk.co.brightfuture.RaysRentals_Balotellitubies.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
