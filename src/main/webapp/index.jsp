@@ -6,9 +6,7 @@ Click the link to start the app
 <br>
 <br>
 <br/>
-<a href="smvc//bikes">Bikes</a>
-<a href="smvc//maintenance">Maintenance</a>
-<a href="smvc//disposal">Disposal</a>
+<a href="smvc/bikes/addabike">Address Book</a>
 
 
 </body>
