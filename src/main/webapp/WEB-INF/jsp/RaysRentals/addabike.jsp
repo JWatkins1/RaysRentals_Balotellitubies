@@ -51,7 +51,7 @@
 					aria-expanded="false">Bikes <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="${pageContext.request.contextPath}/smvc/bikes/addabike">Add a New Bike</a></li>
-						<li><a href="#">List of Bikes</a></li>
+						<li><a href="${pageContext.request.contextPath}/smvc/bikes/listofbikes">List of Bikes</a></li>
 					</ul></li>
 
 				<!-- maintenance dropdown -->
