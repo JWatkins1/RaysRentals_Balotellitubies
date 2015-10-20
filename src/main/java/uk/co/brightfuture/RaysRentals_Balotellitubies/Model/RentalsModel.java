@@ -3,43 +3,39 @@ package uk.co.brightfuture.RaysRentals_Balotellitubies.Model;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-//import javax.persistence.Column;
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
-//import javax.persistence.Table;
-//import javax.persistence.Id;
-//
-//import org.hibernate.annotations.Type;
-//import org.joda.time.DateTime;
-//import org.joda.time.LocalDateTime;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @SuppressWarnings("serial")
-//@Entity
-//@Table(name = "Rentals")
+@Entity
+@Table(name = "Rentals")
 public class RentalsModel implements Serializable {
 
 	/**
 	 * 
 	 */
 
-//	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
 	
-//	@Column(name = "rent_date")
+	@Column(name = "rent_date")
 	private Timestamp rent_date;
 	
-//	@Column(name = "customer_id")
+	@Column(name = "customer_id")
 	private int customer_id;
 	
-//	@Column(name = "bike_reference_number")
+	@Column(name = "bike_reference_number")
 	private int bike_reference_number;
 	
-//	@(name = "cost_of_rental")
+	@Column(name = "cost_of_rental")
 	private Double cost_of_rental;
 	
-//	@Column(name = "customer_paid")
+	@Column(name = "customer_paid")
 	private Boolean customer_paid;
 	
 	
