@@ -18,8 +18,16 @@ public class BikesController {
 	@RequestMapping("/bikes")
 	public String bikes() {
 		
-		bikesDAO.bikes("Yolo");
+		//bikesDAO.bikes("Yolo");
 		return "RaysRentals/bikes";
+	
+	}
+	
+	@RequestMapping("/bikes/addabike")
+	public String addabike() {
+		
+		bikesDAO.bikes("Yolo");
+		return "RaysRentals/addabike";
 	
 	}
 	

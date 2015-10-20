@@ -6,7 +6,7 @@ Click the link to start the app
 <br>
 <br>
 <br/>
-<a href="smvc/simpleForms/bikes">Address Book</a>
+<a href="smvc/bikes/addabike">Address Book</a>
 
 
 </body>
