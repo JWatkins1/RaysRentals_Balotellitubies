@@ -5,19 +5,21 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.MaintenanceModel;
+import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.BikesModel;
+import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.DisposalModel;
 
-public class MaintenanceDAO implements Maintenance{
+public class DisposalDAO {
+	
 	
 	
 	@Autowired
 	@Qualifier("sessionFactory")
 	public SessionFactory sessionFactory;
 	
-	public void maintenance(MaintenanceModel maintenanceModel) {
+	public void Disposal(DisposalModel disposal) {
 		
 		Session session = sessionFactory.openSession();
-		session.save(maintenanceModel);
+		session.save(disposal);
 		
 	}
 }
