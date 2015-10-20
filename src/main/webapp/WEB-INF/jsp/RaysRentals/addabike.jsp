@@ -86,15 +86,18 @@
 			<label for="inputPassword3" class="col-sm-4 control-label formLabel">Cost
 				of Bike</label>
 			<div class="col-md-4 col-md-offset-0">
-				<input type="number" class="form-control" id="inputPassword3"
-					placeholder="Cost of Bike (£)">
+				<div class="input-group">
+					<div class="input-group-addon">£</div>
+					<input type="number" class="form-control" id="inputPassword3"
+						placeholder="Cost of Bike (£)">
+				</div>
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="inputPassword3" class="col-sm-4 control-label formLabel">Purchase
 				Date</label>
 			<div class="col-md-4 col-md-offset-0">
-				<input type="datetime-local" class="form-control"
+				<input type="date" class="form-control"
 					id="inputPassword3" placeholder="Purchase Date">
 			</div>
 		</div>
@@ -102,8 +105,13 @@
 			<label for="inputPassword3" class="col-sm-4 control-label formLabel">Bike
 				Type</label>
 			<div class="col-md-4 col-md" ">
-				<input type="text" class="form-control" id="inputPassword3"
-					placeholder="Bike Type">
+				<select class="form-control">
+					<option value="" disabled="" selected="">Select a Type</option>
+					<option>Road Bike</option>
+					<option>Mountain Bike</option>
+					<option>BMX</option>
+					<option>Kids Bike</option>
+				</select>
 			</div>
 		</div>
 		<div class="form-group">
