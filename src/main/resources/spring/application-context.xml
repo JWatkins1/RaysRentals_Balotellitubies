@@ -30,6 +30,14 @@
 	<bean name="DisposalServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.DisposalServiceImpl" />
 	<bean name="DisposalController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.DisposalController" />
 	
+	<bean name="CustomerDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.CustomerDAO" />
+	<bean name="CustomerServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.CustomerServiceImpl" />
+	<bean name="CustomerController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.CustomerController" />
+	
+	<bean name="ServicingDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.ServicingDAO" />
+	<bean name="ServicingServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.ServicingServiceImpl" />
+	<bean name="ServicingController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.ServicingController" />
+	
 	<bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 	
 		<property name="dataSource" ref="addressDataSource" />
