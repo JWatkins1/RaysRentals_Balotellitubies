@@ -24,7 +24,7 @@
 	href="${pageContext.request.contextPath}/img/bicycle.png"
 	type="image/png" sizes="16x16">
 
-<title>Add a Bike | Rays Rentals</title>
+<title>Dashboard | Rays Rentals</title>
 </head>
 <body>
 	<header> <nav class="navbar navbar-inverse">
@@ -72,18 +72,38 @@
 	<h2 style="text-align: center;">Dashboard</h2>
 
 	<!--  bikes list table -->
-	<div class="container" width="90%" style="float:left;">
-		<div id="addabike">
-			<a href="${pageContext.request.contextPath}/smvc/bikes/addabike"><img alt="addnewbikeicon" src="${pageContext.request.contextPath}/img/addbikeicon.png" width="320" height="200"><p>Add a new Bike</p></a>
-		</div>
+	<div class="row">
+		<button class="btn btn-default col-md-3" type="submit">
+			<a href="${pageContext.request.contextPath}/smvc/bikes/addabike"><img
+				alt="addnewbikeicon"
+				src="${pageContext.request.contextPath}/img/addbikeicon.png"
+				width="320" height="200">
+			<p>Add a new Bike</p></a>
+		</button>
+
+		<button class="btn btn-default col-md-3" type="submit">
+			<a href="${pageContext.request.contextPath}/smvc/bikes/listofbikes"><img
+				alt="listofbikesicon"
+				src="${pageContext.request.contextPath}/img/list.png" width="200"
+				height="200">
+			<p>List of all Bikes</p></a>
+		</button>
+		
+		<button class="btn btn-default col-md-3" type="submit">
+			<a href="${pageContext.request.contextPath}/smvc/bikes/listofbikes"><img
+				alt="listofbikesicon"
+				src="${pageContext.request.contextPath}/img/list.png" width="200"
+				height="200">
+			<p>Rented Bikes</p></a>
+		</button>
 	</div>
 
-	<!--  scripts for jquery and bootstrap js -->
-	<script
-		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script
-		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css"
-		href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<!--  scripts for jquery and bootstrap js -->
+		<script
+			src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script
+			src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css"
+			href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </body>
 </html>

@@ -65,47 +65,49 @@
 	</div>
 	<!-- /.container-fluid --> </nav></header>
 	<h2 style="text-align:center;"> Add a new Bike</h2>
-	<form class="form-horizontal">
+	<form class="form-horizontal" action="bikes/addadbike" method="POST" name="addabikeform">
 		<div class="form-group">
-			<label for="Bike Name" class="col-sm-4 control-label formLabel">Bike
+			<label for="BikeName" class="col-sm-4 control-label formLabel">Bike
 				Name</label>
 			<div class="col-md-4 col-md-offset-0">
-				<input type="text" class="form-control" name="Bike Name"
+				<input type="text" class="form-control" name="BikeName"
 					placeholder="Bike Name">
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="inputPassword3" class="col-sm-4 control-label formLabel">Manufacturer
+			<label for="ManufacturerVersion" class="col-sm-4 control-label formLabel">Manufacturer
 				Version</label>
 			<div class="col-md-4 col-md-offset-0">
-				<input type="text" class="form-control" id="inputPassword3"
+				<input type="text" class="form-control" name="ManufacturerVersion"
+				id="ManufacturerVersion"
 					placeholder="Manufacturer Version">
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="inputPassword3" class="col-sm-4 control-label formLabel">Cost
+			<label for="CostOfBike" class="col-sm-4 control-label formLabel">Cost
 				of Bike</label>
 			<div class="col-md-4 col-md-offset-0">
 				<div class="input-group">
 					<div class="input-group-addon">£</div>
-					<input type="number" class="form-control" id="inputPassword3"
+					<input type="number" class="form-control" name="CostOfBike" 
+					id="CostOfBike"
 						placeholder="Cost of Bike (£)">
 				</div>
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="inputPassword3" class="col-sm-4 control-label formLabel">Purchase
+			<label for="PurchaseDate" class="col-sm-4 control-label formLabel">Purchase
 				Date</label>
 			<div class="col-md-4 col-md-offset-0">
-				<input type="date" class="form-control"
-					id="inputPassword3" placeholder="Purchase Date">
+				<input type="date" class="form-control" name="PurchaseDate"
+					id="PurchaseDate" placeholder="Purchase Date">
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="inputPassword3" class="col-sm-4 control-label formLabel">Bike
+			<label for="BikeType" class="col-sm-4 control-label formLabel">Bike
 				Type</label>
 			<div class="col-md-4 col-md" ">
-				<select class="form-control">
+				<select class="form-control" name="BikeType" id="BikeType">
 					<option value="" disabled="" selected="">Select a Type</option>
 					<option>Road Bike</option>
 					<option>Mountain Bike</option>
@@ -115,19 +117,20 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="inputPassword3" class="col-sm-4 control-label formLabel">Bike
+			<label for="BikeSize" class="col-sm-4 control-label formLabel">Bike
 				Size</label>
 			<div class="col-md-4 col-md-offset-0">
-				<input type="number" class="form-control" id="inputPassword3"
+				<input type="number" class="form-control" name="BikeSize"
+				id="BikeSize"
 					placeholder="Bike Size">
 			</div>
 		</div>
 
 		<!--  status dropdown -->
 		<div class="form-group">
-			<label for="inputPassword3" class="col-sm-4 control-label formLabel">Status</label>
+			<label for="Status" class="col-sm-4 control-label formLabel">Status</label>
 			<div class="col-md-4 col-md-offset-0">
-				<select class="form-control">
+				<select class="form-control" name="Status" id="Status">
 					<option value="" disabled="" selected="">Select a Status</option>
 					<option>Available</option>
 					<option>Rented</option>
