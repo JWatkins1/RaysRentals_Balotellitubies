@@ -1,8 +1,8 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Model;
 
-public interface Rentals {
+public interface Rental {
 	
 	
-	public void rentals(RentalsModel rentals);
+	public void rentals(RentalModel rentals);
 	
 }
