@@ -1,5 +1,8 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Services;
 
+import java.util.Date;
+
+import org.joda.time.LocalDate;
 import org.joda.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -13,16 +16,18 @@ public class BikesServiceImpl implements BikesService{
 	@Qualifier("BikesDAO")
 	BikesDAO bikesDAO;
 	
-	public void saveBikes(){
+	public void saveBikes(String bikename, int manufacturerVersion, int cost, Date purchaseDate,String bikeType, 
+			int bikeSize, String status){
 		
 		BikesModel bikes = new BikesModel();
-		bikes.setName("Yamaha");
-		bikes.setBikeType("BMX");
-		bikes.setCost(200);
-		bikes.setDate(new LocalDateTime());
-		bikes.setManufacturerVersion(1);
-		bikes.setSize(15);
-		bikes.setStatus("Available");
+		bikes.setName(bikename);
+		bikes.setBikeType(bikeType);
+		bikes.setCost(cost);
+		bikes.setDate(purchaseDate);
+		bikes.setManufacturerVersion(manufacturerVersion);
+		bikes.setSize(bikeSize);
+		bikes.setStatus(status);
 		bikesDAO.bikes(bikes);
-	}		
+	}
+	
 }
