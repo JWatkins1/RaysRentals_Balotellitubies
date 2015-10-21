@@ -87,16 +87,18 @@
 				</tr>
 			</thead>
 			<tbody>
+				<c:forEach items="${bike}" var="bl">
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>${bl.Id}</td>
+					<td>${bl.name}</td>
+					<td>${bl.manufacturer_version}</td>
+					<td>${bl.date}</td>
+					<td>${bl.cost}</td>
+					<td>${bl.bikeType}</td>
+					<td>${bl.size}</td>
+					<td>${bl.status}</td>
 				</tr>
+				</c:forEach>
 			</tbody>
 		</table>
 	</div>

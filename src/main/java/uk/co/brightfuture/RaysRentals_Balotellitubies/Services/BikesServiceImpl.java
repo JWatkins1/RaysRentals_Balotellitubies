@@ -1,5 +1,7 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Services;
 
+import java.util.List;
+
 import org.joda.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -24,5 +26,9 @@ public class BikesServiceImpl implements BikesService{
 		bikes.setSize(15);
 		bikes.setStatus("Available");
 		bikesDAO.bikes(bikes);
-	}		
+	}	
+	
+	public List<BikesModel> retrieveAllBikes(){
+		return	bikesDAO.retrieveAllBikes();
+	}
 }
