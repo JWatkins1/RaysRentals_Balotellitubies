@@ -27,7 +27,7 @@ public class BikesServiceImpl implements BikesService{
 		bikes.setSize(bikeSize);
 		bikes.setStatus(status);
 		bikesDAO.bikes(bikes);
-	}	
+	}
 	
 	public List<BikesModel> retrieveAllBikes(){
 		return	bikesDAO.retrieveAllBikes();
