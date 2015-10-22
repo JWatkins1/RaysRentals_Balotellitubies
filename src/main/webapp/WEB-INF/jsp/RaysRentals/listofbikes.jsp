@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" 
+           uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<metacharset"utf-8">
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
@@ -24,7 +25,7 @@
 	href="${pageContext.request.contextPath}/img/bicycle.png"
 	type="image/png" sizes="16x16">
 
-<title>Add a Bike | Rays Rentals</title>
+<title>List of Bike | Rays Rentals</title>
 </head>
 <body>
 	<header> <nav class="navbar navbar-inverse">
@@ -89,9 +90,9 @@
 			<tbody>
 				<c:forEach items="${bike}" var="bl">
 				<tr>
-					<td>${bl.Id}</td>
+					<td>${bl.id}</td>
 					<td>${bl.name}</td>
-					<td>${bl.manufacturer_version}</td>
+					<td>${bl.manufacturerVersion}</td>
 					<td>${bl.date}</td>
 					<td>${bl.cost}</td>
 					<td>${bl.bikeType}</td>
