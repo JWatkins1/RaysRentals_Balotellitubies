@@ -12,5 +12,7 @@ public interface Bikes {
 	
 	public List<BikesModel> retrieveAllBikes();
 
+	public List<BikesModel> retrieveRentedBikes();
+
 	
 }
