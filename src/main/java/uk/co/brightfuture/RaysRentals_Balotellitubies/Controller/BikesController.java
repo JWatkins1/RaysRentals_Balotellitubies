@@ -48,8 +48,20 @@ public class BikesController {
 		mv.setViewName("RaysRentals/listofbikes");
 		List<BikesModel> bike = bikesService.retrieveAllBikes();
 		mv.addObject("bike", bike);
-
+		
 		return mv;
+
+	}
+	
+	@RequestMapping("/bikes/rentedbikes")
+	public ModelAndView rentedBikes() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("RaysRentals/rentedBikes");
+		List<BikesModel> bike = bikesService.retrieveRentedBikes();
+		mv.addObject("bike", bike);
+		
+		return mv;
+
 	}
 
 }

@@ -11,6 +11,9 @@ public interface BikesService {
 			int bikeSize, String status);
 	
 	public List<BikesModel> retrieveAllBikes();
+
+	public List<BikesModel> retrieveRentedBikes();
+	
 	
 	
 }

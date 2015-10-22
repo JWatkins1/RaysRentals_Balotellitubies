@@ -32,4 +32,8 @@ public class BikesServiceImpl implements BikesService{
 	public List<BikesModel> retrieveAllBikes(){
 		return	bikesDAO.retrieveAllBikes();
 	}
+	
+	public List<BikesModel> retrieveRentedBikes(){
+		return	bikesDAO.retrieveRentedBikes();
+	}
 }
