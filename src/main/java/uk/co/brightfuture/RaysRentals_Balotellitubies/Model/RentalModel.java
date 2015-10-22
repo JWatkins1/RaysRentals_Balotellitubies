@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "Rentals")
-public class RentalsModel implements Serializable {
+public class RentalModel implements Serializable {
 
 	/**
 	 * 
@@ -37,6 +37,7 @@ public class RentalsModel implements Serializable {
 	
 	@Column(name = "customer_paid")
 	private Boolean customer_paid;
+	
 	
 	
 	public Timestamp getRentDate() {
@@ -77,6 +78,14 @@ public class RentalsModel implements Serializable {
 
 	public void setCustomerPaid(boolean customer_paid) {
 		this.customer_paid = customer_paid;
+	}
+	
+	public Double getCostOfRental() {
+		return cost_of_rental;
+	}
+
+	public void setCostOfRental(double cost_of_rental) {
+		this.cost_of_rental = cost_of_rental;
 	}
 	
 	
