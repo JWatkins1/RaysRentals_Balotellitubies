@@ -1,16 +1,9 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Services;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-
-import org.joda.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-import uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.BikesDAO;
 import uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.RentalDAO;
-import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.BikesModel;
 import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.RentalModel;
 
 public class RentalServiceImpl implements RentalService{

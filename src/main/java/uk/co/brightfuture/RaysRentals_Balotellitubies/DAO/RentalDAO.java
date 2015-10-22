@@ -5,8 +5,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.Customer;
-import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.CustomerModel;
 import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.Rental;
 import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.RentalModel;
 
