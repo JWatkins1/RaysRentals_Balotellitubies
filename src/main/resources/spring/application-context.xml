@@ -40,6 +40,10 @@
 	<bean name="ServicingServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.ServicingServiceImpl" />
 	<bean name="ServicingController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.ServicingController" />
 	
+	<bean name="UserDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.UserDAO" />
+	<bean name="UserServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.UserServiceImpl" />
+	<bean name="RegisterController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.RegisterController" />
+	
 	<bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 	
 		<property name="dataSource" ref="addressDataSource" />

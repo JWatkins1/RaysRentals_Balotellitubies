@@ -50,7 +50,6 @@ public class BikesController {
 		mv.addObject("bike", bike);
 		
 		return mv;
-
 	}
 	
 	@RequestMapping("/bikes/rentedbikes")
@@ -61,7 +60,6 @@ public class BikesController {
 		mv.addObject("bike", bike);
 		
 		return mv;
-
 	}
 
 }
