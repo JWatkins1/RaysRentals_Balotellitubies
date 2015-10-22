@@ -1,16 +1,18 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Table;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 import org.joda.time.LocalDateTime;
 
 @Entity
@@ -33,8 +35,8 @@ public class BikesModel implements Serializable {
 	private int manufacturerVersion;
 	
 	@Column(name = "purchase_date")
-	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDateTime")
-	private LocalDateTime date;
+	//@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
+	private Date date;
 	
 	@Column(name = "cost_of_bike")
 	private int cost;
@@ -56,12 +58,12 @@ public class BikesModel implements Serializable {
 		this.manufacturerVersion = manufacturerVersion;
 	}
 
-	public LocalDateTime getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDateTime localDateTime) {
-		this.date = localDateTime;
+	public void setDate(Date purchaseDate) {
+		this.date = purchaseDate;
 	}
 
 	public int getCost() {

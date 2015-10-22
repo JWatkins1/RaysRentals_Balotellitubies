@@ -22,13 +22,23 @@
 	<bean name="BikesServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.BikesServiceImpl" />
 	<bean name="bikesController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.BikesController" />
 	
+	<bean name="DashboardController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.DashboardController" />
+	
 	<bean name="MaintenanceDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.MaintenanceDAO" />
 	<bean name="MaintenanceServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.MaintenanceServiceImpl" />
 	<bean name="maintenanceController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.MaintenanceController" />
 	
+	<bean name="DisposalDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.DisposalDAO" />
+	<bean name="DisposalServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.DisposalServiceImpl" />
+	<bean name="DisposalController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.DisposalController" />
+	
 	<bean name="CustomerDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.CustomerDAO" />
 	<bean name="CustomerServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.CustomerServiceImpl" />
 	<bean name="CustomerController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.CustomerController" />
+	
+	<bean name="ServicingDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.ServicingDAO" />
+	<bean name="ServicingServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.ServicingServiceImpl" />
+	<bean name="ServicingController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.ServicingController" />
 	
 	<bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 	

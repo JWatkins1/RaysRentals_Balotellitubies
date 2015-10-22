@@ -5,19 +5,17 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.CustomerModel;
+import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.ServicingModel;
 
-public class CustomerDAO implements Customer {
+public class ServicingDAO implements Servicing {
 
 	@Autowired
 	@Qualifier("sessionFactory")
 	public SessionFactory sessionFactory;
 
-	public void saveCustomer(CustomerModel customerModel) {
+	public void saveServicing(ServicingModel servicingModel) {
 
 		Session session = sessionFactory.openSession();
-		session.save(customerModel);
+		session.save(servicingModel);
 	}
-
-
 }
