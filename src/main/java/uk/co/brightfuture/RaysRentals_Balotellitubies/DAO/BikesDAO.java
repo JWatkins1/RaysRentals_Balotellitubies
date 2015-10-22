@@ -1,5 +1,8 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.DAO;
 
+import java.util.List;
+
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,5 +21,13 @@ public class BikesDAO implements Bikes {
 		Session session = sessionFactory.openSession();
 		session.save(bikesModel);
 		
+	}
+	
+	@Override
+	public List<BikesModel> retrieveAllBikes() {
+		Session session = sessionFactory.openSession();
+		Criteria criteria = session.createCriteria(BikesModel.class);
+		List<BikesModel> bikes = criteria.list();
+		return bikes;
 	}
 }

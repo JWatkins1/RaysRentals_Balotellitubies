@@ -1,9 +1,8 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Services;
 
 import java.util.Date;
+import java.util.List;
 
-import org.joda.time.LocalDate;
-import org.joda.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
@@ -30,4 +29,7 @@ public class BikesServiceImpl implements BikesService{
 		bikesDAO.bikes(bikes);
 	}
 	
+	public List<BikesModel> retrieveAllBikes(){
+		return	bikesDAO.retrieveAllBikes();
+	}
 }
