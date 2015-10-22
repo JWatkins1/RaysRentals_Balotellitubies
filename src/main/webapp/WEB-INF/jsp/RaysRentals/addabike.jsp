@@ -65,13 +65,13 @@
 	</div>
 	<!-- /.container-fluid --> </nav></header>
 	<h2 style="text-align:center;"> Add a new Bike</h2>
-	<form class="form-horizontal" action="bikes/addadbike" method="POST" name="addabikeform">
+	<form class="form-horizontal" action="bikes/addabike" method="POST" name="addabikeform">
 		<div class="form-group">
 			<label for="BikeName" class="col-sm-4 control-label formLabel">Bike
 				Name</label>
 			<div class="col-md-4 col-md-offset-0">
 				<input type="text" class="form-control" name="BikeName"
-					placeholder="Bike Name">
+					placeholder="Bike Name" id="BikeName">
 			</div>
 		</div>
 		<div class="form-group">
