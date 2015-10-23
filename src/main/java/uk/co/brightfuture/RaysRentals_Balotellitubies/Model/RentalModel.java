@@ -2,6 +2,7 @@ package uk.co.brightfuture.RaysRentals_Balotellitubies.Model;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,7 +25,7 @@ public class RentalModel implements Serializable {
 	private Long Id;
 	
 	@Column(name = "rent_date")
-	private Timestamp rent_date;
+	private Date rent_date;
 	
 	@Column(name = "customer_id")
 	private int customer_id;
@@ -40,11 +41,11 @@ public class RentalModel implements Serializable {
 	
 	
 	
-	public Timestamp getRentDate() {
+	public Date getRentDate() {
 		return rent_date;
 	}
 
-	public void setRentDate(Timestamp rentDate) {
+	public void setRentDate(Date rentDate) {
 		this.rent_date = rentDate;
 	}
 

@@ -37,7 +37,7 @@
 	<!--  bikes list table -->
 	<div class="row" style="margin-top:20px;">
 		<!-- add a bike dash button -->
-		<a href="${pageContext.request.contextPath}/smvc/bikes/addabike">
+		<a href="${pageContext.request.contextPath}/smvc/bikes">
 		<button class="btn btn-default col-md-3 col-sm-offset-0" type="submit" style="margin-left:70px;">
 			<img
 				alt="addnewbikeicon"

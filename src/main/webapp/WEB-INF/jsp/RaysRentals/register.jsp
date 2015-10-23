@@ -66,7 +66,8 @@
 		<div class="form-group">
 			<div style="text-align: center;">
 				<div class="">
-					<button type="submit" class="btn btn-default">Submit</button>
+					<button type="submit" class="btn btn-default">Submit
+					</button>
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,7 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,8 +22,7 @@ public class DisposalModel {
 	private Long Id;
 	
 	@Column(name = "date_of_disposal")
-	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDateTime")
-	private LocalDateTime disposalDate;
+	private Date disposalDate;
 	
 	@Column(name = "bike_id")
 	private int bikeId;
@@ -37,12 +38,12 @@ public class DisposalModel {
 		Id = id;
 	}
 
-	public LocalDateTime getDisposalDate() {
+	public Date getDisposalDate() {
 		return disposalDate;
 	}
 
-	public void setDisposalDate(LocalDateTime disposalDate) {
-		this.disposalDate = disposalDate;
+	public void setDisposalDate(java.util.Date date) {
+		this.disposalDate = date;
 	}
 
 	public int getBikeId() {

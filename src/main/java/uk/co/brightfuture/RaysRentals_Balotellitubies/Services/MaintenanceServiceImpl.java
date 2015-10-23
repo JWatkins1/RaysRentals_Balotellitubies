@@ -1,5 +1,7 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Services;
 
+import java.util.Date;
+
 import org.joda.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -19,7 +21,7 @@ public class MaintenanceServiceImpl implements MaintenanceService{
 		MaintenanceModel maintenance = new MaintenanceModel();
 		maintenance.setDamageDescription("sfw");
 		maintenance.setRepairCost(100);
-		maintenance.setRepairDate(new LocalDateTime());
+		maintenance.setRepairDate(new Date());
 		maintenance.setRepairSolution("sdgea");
 		maintenanceDAO.maintenance(maintenance);
 	}	

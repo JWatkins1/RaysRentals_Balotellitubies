@@ -1,5 +1,7 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Services;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
@@ -21,7 +23,7 @@ public class RentalServiceImpl implements RentalService{
 //		Timestamp timestamp = new Timestamp(date.getTime());
 
 		RentalModel rental = new RentalModel();
-//		rental.setRentDate(timestamp);
+		rental.setRentDate(new Date(0));
 		rental.setCustomerPaid(true);
 		rental.getBikeReferenceNumber();
 		rental.setCostOfRental(20);

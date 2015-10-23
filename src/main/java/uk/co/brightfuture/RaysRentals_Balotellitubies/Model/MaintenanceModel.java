@@ -1,5 +1,7 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,9 +32,8 @@ public class MaintenanceModel {
 	@Column(name = "repair_solution")
 	private String repairSolution;
 	
-	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDateTime")
 	@Column(name = "repair_date")
-	private LocalDateTime repairDate;
+	private Date repairDate;
 	
 	@Column(name = "cost_of_repair")
 	private int repairCost;
@@ -69,11 +70,11 @@ public class MaintenanceModel {
 		this.repairSolution = repairSolution;
 	}
 
-	public LocalDateTime getRepairDate() {
+	public Date getRepairDate() {
 		return repairDate;
 	}
 
-	public void setRepairDate(LocalDateTime repairDate) {
+	public void setRepairDate(Date repairDate) {
 		this.repairDate = repairDate;
 	}
 

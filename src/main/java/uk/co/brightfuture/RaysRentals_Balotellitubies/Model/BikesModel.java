@@ -30,7 +30,6 @@ public class BikesModel implements Serializable {
 	private int manufacturerVersion;
 	
 	@Column(name = "purchase_date")
-	//@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
 	private Date date;
 	
 	@Column(name = "cost_of_bike")

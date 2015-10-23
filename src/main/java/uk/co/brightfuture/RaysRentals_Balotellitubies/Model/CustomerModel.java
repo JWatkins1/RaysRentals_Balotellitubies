@@ -1,6 +1,7 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -35,8 +36,7 @@ public class CustomerModel implements Serializable {
 	private String password;
 	
 	@Column(name = "date_joined")
-	@Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDateTime")
-	private LocalDateTime joinDate;
+	private Date joinDate;
 	
 	@Column(name = "address")
 	private String address;
@@ -74,11 +74,11 @@ public class CustomerModel implements Serializable {
 		this.password = password;
 	}
 	
-	public LocalDateTime getJoinDate() {
+	public Date getJoinDate() {
 		return joinDate;
 	}
 	
-	public void setJoinDate(LocalDateTime joinDate) {
+	public void setJoinDate(Date joinDate) {
 		this.joinDate = joinDate;
 	}
 	
