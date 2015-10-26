@@ -34,7 +34,9 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="${pageContext.request.contextPath}/smvc/dashboard">Rays Rentals</a>
+			<a class="navbar-brand"
+				href="${pageContext.request.contextPath}/smvc/dashboard">Rays
+				Rentals</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,14 +44,14 @@
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="${pageContext.request.contextPath}/smvc/register">Register</a>
-				<li><a href="${pageContext.request.contextPath}/smvc/dashboard">Dashboard </a></li>
+				<li><a href="${pageContext.request.contextPath}/smvc/dashboard">Dashboard
+				</a></li>
 				<!-- bike dropdown -->
 				<li class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Bikes <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a
-							href="${pageContext.request.contextPath}/smvc/bikes">Add
+						<li><a href="${pageContext.request.contextPath}/smvc/bikes">Add
 								a New Bike</a></li>
 						<li><a
 							href="${pageContext.request.contextPath}/smvc/bikes/listofbikes">List
@@ -59,9 +61,12 @@
 				<!-- maintenance dropdown -->
 				<li><a href="#">Maintenance</a></li>
 
-				<li><a href="${pageContext.request.contextPath}/smvc/rental">Rent a Bike</a></li>
-				
-				<li><a href="${pageContext.request.contextPath}/smvc/listofrentals">Current Rentals</a></li>
+				<li><a href="${pageContext.request.contextPath}/smvc/rental">Rent
+						a Bike</a></li>
+
+				<li><a
+					href="${pageContext.request.contextPath}/smvc/listofrentals">Current
+						Rentals</a></li>
 
 			</ul>
 		</div>
@@ -73,6 +78,13 @@
 		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script
 		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="content/js/jquery.min.js"></script>
+	<script src="content/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.dropdown-toggle').dropdown();
+		});
+	</script>
 
 </body>
 </html>
