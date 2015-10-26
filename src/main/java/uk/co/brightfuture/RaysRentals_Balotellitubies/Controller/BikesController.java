@@ -31,11 +31,14 @@ public class BikesController {
 	}
 
 	@RequestMapping("/bikes/addabike")
-	public ModelAndView addabike(@RequestParam("BikeName") String bikename, @RequestParam("ManufacturerVersion") int manufacturerVersion,
-			@RequestParam("CostOfBike") int cost, @RequestParam("PurchaseDate") @DateTimeFormat(pattern="yyyy-MM-dd") Date purchaseDate, @RequestParam("BikeType") String bikeType, 
-			@RequestParam("BikeSize") int bikeSize, @RequestParam("Status") String status ) {
-		
-		
+	public ModelAndView addabike(@RequestParam("BikeName") String bikename,
+			@RequestParam("ManufacturerVersion") int manufacturerVersion, 
+			@RequestParam("CostOfBike") int cost,
+			@RequestParam("PurchaseDate") @DateTimeFormat(pattern = "yyyy-MM-dd") Date purchaseDate,
+			@RequestParam("BikeType") String bikeType, 
+			@RequestParam("BikeSize") int bikeSize,
+			@RequestParam("Status") String status) {
+
 		ModelAndView mv = new ModelAndView("RaysRentals/addabike");
 		bikesService.saveBikes(bikename, manufacturerVersion, cost, purchaseDate, bikeType, bikeSize, status);
 		return mv;
@@ -44,22 +47,24 @@ public class BikesController {
 
 	@RequestMapping("/bikes/listofbikes")
 	public ModelAndView listofbikes() {
+		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("RaysRentals/listofbikes");
 		List<BikesModel> bike = bikesService.retrieveAllBikes();
 		mv.addObject("bike", bike);
-		
+
 		return mv;
 
 	}
-	
+
 	@RequestMapping("/bikes/rentedbikes")
 	public ModelAndView rentedBikes() {
+		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("RaysRentals/rentedBikes");
 		List<BikesModel> bike = bikesService.retrieveRentedBikes();
 		mv.addObject("bike", bike);
-		
+
 		return mv;
 
 	}

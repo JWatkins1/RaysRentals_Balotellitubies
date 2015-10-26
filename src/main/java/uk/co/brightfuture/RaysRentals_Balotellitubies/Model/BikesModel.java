@@ -110,6 +110,4 @@ public class BikesModel implements Serializable {
 		this.name = name;
 	}
 
-	
-	
 }

@@ -1,5 +1,8 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.DAO;
 
+import java.util.List;
+
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +21,14 @@ public class CustomerDAO implements Customer {
 		Session session = sessionFactory.openSession();
 		session.save(customerModel);
 	}
-
-
+	
+	@Override
+	public List<CustomerModel> retrieveAllCustomers() {
+		
+		Session session = sessionFactory.openSession();
+		Criteria criteria = session.createCriteria(CustomerModel.class);
+		List<CustomerModel> customer = criteria.list();
+		
+		return customer;
+	}
 }
