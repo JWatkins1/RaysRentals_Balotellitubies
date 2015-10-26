@@ -16,5 +16,4 @@ public interface BikesService {
 	public List<BikesModel> retrieveRentedBikes();
 	
 	
-	
 }

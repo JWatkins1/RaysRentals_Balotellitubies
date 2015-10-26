@@ -24,8 +24,11 @@ public class RentalModel implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
 	
-	@Column(name = "rent_date")
-	private Date rent_date;
+	@Column(name = "start_date")
+	private Date start_date;
+	
+	@Column(name = "end_date")
+	private Date end_date;
 	
 	@Column(name = "customer_id")
 	private int customer_id;
@@ -41,12 +44,12 @@ public class RentalModel implements Serializable {
 	
 	
 	
-	public Date getRentDate() {
-		return rent_date;
+	public Date getStartDate() {
+		return start_date;
 	}
 
-	public void setRentDate(Date rentDate) {
-		this.rent_date = rentDate;
+	public void setStartDate(Date startDate) {
+		this.start_date = startDate;
 	}
 
 	public int getCustomerID() {
@@ -88,6 +91,16 @@ public class RentalModel implements Serializable {
 	public void setCostOfRental(double cost_of_rental) {
 		this.cost_of_rental = cost_of_rental;
 	}
+
+	public Date getEnd_date() {
+		return end_date;
+	}
+
+	public void setEnd_date(Date end_date) {
+		this.end_date = end_date;
+	}
+	
+	
 	
 	
 }

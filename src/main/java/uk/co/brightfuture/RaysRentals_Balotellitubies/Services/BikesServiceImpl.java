@@ -15,6 +15,7 @@ public class BikesServiceImpl implements BikesService{
 	@Qualifier("BikesDAO")
 	BikesDAO bikesDAO;
 	
+	@Override
 	public void saveBikes(String bikename, int manufacturerVersion, int cost, Date purchaseDate,String bikeType, 
 			int bikeSize, String status){
 		
@@ -29,11 +30,15 @@ public class BikesServiceImpl implements BikesService{
 		bikesDAO.bikes(bikes);
 	}
 	
+	@Override
 	public List<BikesModel> retrieveAllBikes(){
 		return	bikesDAO.retrieveAllBikes();
 	}
 	
+	@Override
 	public List<BikesModel> retrieveRentedBikes(){
 		return	bikesDAO.retrieveRentedBikes();
 	}
+	
 }
+

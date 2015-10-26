@@ -59,7 +59,9 @@
 				<!-- maintenance dropdown -->
 				<li><a href="#">Maintenance</a></li>
 
-				<li><a href=#">Rentals</a></li>
+				<li><a href="${pageContext.request.contextPath}/smvc/rental">Rent a Bike</a></li>
+				
+				<li><a href="${pageContext.request.contextPath}/smvc/listofrentals">Current Rentals</a></li>
 
 			</ul>
 		</div>

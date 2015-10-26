@@ -1,6 +1,7 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Services;
 
 import java.sql.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -25,5 +26,10 @@ public class CustomerServiceImpl implements CustomerService {
 		customer.setPhoneNumber("07777777777");
 		customer.setRentedBikes(5);
 		customerDAO.saveCustomer(customer);
+	}
+	
+	@Override
+	public List<CustomerModel> retrieveAllCustomers() {
+		return customerDAO.retrieveAllCustomers();
 	}
 }

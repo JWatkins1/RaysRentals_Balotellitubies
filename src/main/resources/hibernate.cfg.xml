@@ -29,9 +29,11 @@
 <property name="show_sql">true</property>
  
 <!-- Drop and re-create the database schema on startup -->
-<property name="hbm2ddl.auto">update</property>
+<property name="hbm2ddl.auto">create</property>
 
 <mapping class="uk.co.brightfuture.RaysRentals_Balotellitubies.BikesModel"/>
+
+<mapping class="uk.co.brightfuture.RaysRentals_Balotellitubies.CustomerModel"/>
 
 </session-factory>
 </hibernate-configuration>
