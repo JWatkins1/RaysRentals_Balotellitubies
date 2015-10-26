@@ -29,6 +29,7 @@ public class CustomerDAO implements Customer {
 		Criteria criteria = session.createCriteria(CustomerModel.class);
 		@SuppressWarnings("unchecked")
 		List<CustomerModel> customers = criteria.list();
+		
 		return customers;
 	
 	}

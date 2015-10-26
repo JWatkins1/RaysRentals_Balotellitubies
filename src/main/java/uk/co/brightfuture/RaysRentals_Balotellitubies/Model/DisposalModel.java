@@ -9,9 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Type;
-import org.joda.time.LocalDateTime;
-
 
 @Entity
 @Table(name ="disposal")
@@ -21,14 +18,17 @@ public class DisposalModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
 	
-	@Column(name = "date_of_disposal")
-	private Date disposalDate;
-	
 	@Column(name = "bike_id")
 	private int bikeId;
 	
 	@Column(name = "dealer")
 	private String dealer;
+
+	@Column(name = "date_of_disposal")
+	private Date disposalDate;
+	
+	@Column(name = "sell_price")
+	private double sellPrice;
 	
 	public Long getId() {
 		return Id;
@@ -42,8 +42,8 @@ public class DisposalModel {
 		return disposalDate;
 	}
 
-	public void setDisposalDate(java.util.Date date) {
-		this.disposalDate = date;
+	public void setDisposalDate(Date disposalDate) {
+		this.disposalDate = disposalDate;
 	}
 
 	public int getBikeId() {
@@ -62,15 +62,12 @@ public class DisposalModel {
 		this.dealer = dealer;
 	}
 
-	public int getSellPrice() {
+	public double getSellPrice() {
 		return sellPrice;
 	}
 
-	public void setSellPrice(int sellPrice) {
+	public void setSellPrice(double sellPrice) {
 		this.sellPrice = sellPrice;
 	}
-
-	@Column(name = "sell_price")
-	private int sellPrice;
 
 }

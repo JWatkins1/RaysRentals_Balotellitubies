@@ -9,15 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Type;
-import org.joda.time.LocalDateTime;
-
-
-
 @Entity
-@Table(name ="maintenance")
+@Table(name = "maintenance")
 public class MaintenanceModel {
-	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,16 +19,16 @@ public class MaintenanceModel {
 
 	@Column(name = "bike_id")
 	private int bikeId;
-	
+
 	@Column(name = "description_of_damage")
 	private String damageDescription;
-	
+
 	@Column(name = "repair_solution")
 	private String repairSolution;
-	
+
 	@Column(name = "repair_date")
 	private Date repairDate;
-	
+
 	@Column(name = "cost_of_repair")
 	private int repairCost;
 
@@ -85,5 +79,5 @@ public class MaintenanceModel {
 	public void setRepairCost(int repairCost) {
 		this.repairCost = repairCost;
 	}
-	
+
 }
