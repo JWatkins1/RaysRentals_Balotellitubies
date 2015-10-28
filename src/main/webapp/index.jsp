@@ -30,7 +30,7 @@
 	<header><jsp:directive.include
 		file="/WEB-INF/jsp/fragments/nav.jsp" /> </header>
 	<h2 style="text-align: center;">Log In</h2>
-	<form class="form-horizontal" action="#" method="POST" name="login">
+	<form class="form-horizontal" action="LogInRequest" method="POST" name="login">
 		<div class="form-group">
 			<!-- <label for="Email" class="col-sm-4 control-label formLabel">Email</label> -->
 			<div class="col-md-4 col-md-offset-4">

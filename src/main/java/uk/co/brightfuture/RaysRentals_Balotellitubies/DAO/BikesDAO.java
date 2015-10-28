@@ -16,14 +16,14 @@ public class BikesDAO implements Bikes {
 	@Autowired
 	@Qualifier("sessionFactory")
 	public SessionFactory sessionFactory;
-	
+
 	public void bikes(BikesModel bikesModel) {
-		
+
 		Session session = sessionFactory.openSession();
 		session.save(bikesModel);
-		
+
 	}
-	
+
 	@Override
 	public List<BikesModel> retrieveAllBikes() {
 		Session session = sessionFactory.openSession();
@@ -31,14 +31,27 @@ public class BikesDAO implements Bikes {
 		List<BikesModel> bikes = criteria.list();
 		return bikes;
 	}
-	
+
 	@Override
 	public List<BikesModel> retrieveRentedBikes() {
 		Session session = sessionFactory.openSession();
 		Criteria criteria = session.createCriteria(BikesModel.class);
 		criteria.add(Restrictions.eq("status", "Rented"));
 		List<BikesModel> bikes = criteria.list();
-		
+
 		return bikes;
+	}
+
+	/**
+	 * gets a bike by its id
+	 * 
+	 * @param Long
+	 *            id
+	 * @return BikesModel
+	 */
+	@Override
+	public BikesModel retrieveBikeById(Long id) {
+		return (BikesModel) sessionFactory.openSession().load(BikesModel.class,
+				id);
 	}
 }

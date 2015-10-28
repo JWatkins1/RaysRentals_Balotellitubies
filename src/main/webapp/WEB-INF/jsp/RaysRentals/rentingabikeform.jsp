@@ -54,7 +54,7 @@
 					<option value="" disabled="" selected="">Select a Customer</option>
 					<c:forEach items="${customers}" var="customer">
 						<option value="${customer.id}">Name: ${customer.name},
-							Email: ${customer.email}, Address: £${customer.address}, Phone
+							Email: ${customer.email}, Address: ${customer.address}, Phone
 							No.: ${customer.phoneNumber}</option>
 					</c:forEach>
 				</select>

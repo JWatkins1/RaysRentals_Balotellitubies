@@ -39,6 +39,12 @@ public class BikesServiceImpl implements BikesService{
 	public List<BikesModel> retrieveRentedBikes(){
 		return	bikesDAO.retrieveRentedBikes();
 	}
+
+	@Override
+	public BikesModel retrieveBikeById(Long id) {
+		BikesModel bike = bikesDAO.retrieveBikeById(id);
+		return bike;
+	}
 	
 }
 

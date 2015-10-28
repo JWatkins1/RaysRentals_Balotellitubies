@@ -14,5 +14,7 @@ public interface Bikes {
 
 	public List<BikesModel> retrieveRentedBikes();
 
+	public BikesModel retrieveBikeById(Long id);
+
 	
 }
