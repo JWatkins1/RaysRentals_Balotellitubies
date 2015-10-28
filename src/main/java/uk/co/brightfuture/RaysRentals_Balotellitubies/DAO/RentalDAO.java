@@ -1,5 +1,6 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.DAO;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -26,16 +27,14 @@ public class RentalDAO implements Rental {
 		
 	}
 	
+	//TODO change open session to getCurrentSession once login is set up 
 	@Override
 	public List<BikesModel> retrieveAvailableBikes() {
 		Session session = sessionFactory.openSession();
 		Criteria criteria = session.createCriteria(BikesModel.class);
 		criteria.add(Restrictions.eq("status", "Available"));
-		@SuppressWarnings("unchecked")
 		List<BikesModel> bike = criteria.list();
 		
 		return bike;
 	}
-
-
 }

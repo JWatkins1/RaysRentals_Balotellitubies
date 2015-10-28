@@ -15,19 +15,6 @@ public class CustomerServiceImpl implements CustomerService {
 	@Qualifier("CustomerDAO")
 	CustomerDAO customerDAO;
 	
-	public void saveCustomer() {
-		CustomerModel customer = new CustomerModel();
-		customer.setName("John");
-		customer.setEmail("john@john.com");
-		customer.setPassword("john");
-		customer.setJoinDate(new Date(0));
-		customer.setAddress("1 Chap rd");
-		customer.setPostCode("M1 1BV");
-		customer.setPhoneNumber("07777777777");
-		customer.setRentedBikes(5);
-		customerDAO.saveCustomer(customer);
-	}
-	
 	@Override
 	public List<CustomerModel> retrieveAllCustomers() {
 		return customerDAO.retrieveAllCustomers();

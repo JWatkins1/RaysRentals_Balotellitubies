@@ -25,31 +25,34 @@ public class RentalsController {
 	RentalService rentalService;
 	
 	@Autowired
+	@Qualifier("CustomerServiceImpl")
+	CustomerService customerService;
+	
+	@Autowired
 	@Qualifier("BikesServiceImpl")
 	BikesService bikesService;
 	
 	@RequestMapping("/rental")
 	public ModelAndView rentABikePage(){
 		ModelAndView mv = new ModelAndView();
+		
+		List<BikesModel> bike = rentalService.retrieveAvailableBikes();
+		mv.addObject("bike", bike);
 		mv.setViewName("RaysRentals/rentingabikeform");
-		List<BikesModel> availableBike = rentalService.retrieveAvailableBikes();
-		mv.addObject("availableBike", availableBike);
-		
-		//List<CustomerModel> customers = customerService.retrieveAllCustomers();
-		//mv.addObject("customers", customers);
-		
+		List<CustomerModel> customers = customerService.retrieveAllCustomers();
+		mv.addObject("customers", customers);
 		
 		return mv;
 	}
 	
-	/*@RequestMapping("/rental/submitrental")
+	@RequestMapping("/rental/submitrental")
 	public ModelAndView rentABike(@RequestParam("Bike")int bikeId, @RequestParam("CustomerId")int customerId, @RequestParam("StartDate")Date startDate, @RequestParam("EndDate")Date endDate, @RequestParam("CostOfRental")int costOfRental, @RequestParam("CustomerPaid")Boolean customerPaid){
 		ModelAndView mv = new ModelAndView();
 		rentalService.saveRental(bikeId,customerId, startDate, endDate, costOfRental, customerPaid);
 		
 		return mv;
 		
-	}*/
+	}
 	
 	@RequestMapping("/listofrentals")
 	public ModelAndView listOfRentalsPage(){
@@ -57,8 +60,8 @@ public class RentalsController {
 		mv.setViewName("RaysRentals/listofrentals");
 		List<BikesModel> rentedBikes = bikesService.retrieveRentedBikes();
 		mv.addObject("rentedBikes", rentedBikes);
-		//List<CustomerModel> customers = customerService.retrieveAllCustomers();
-		//mv.addObject("customers", customers);
+		List<CustomerModel> customers = customerService.retrieveAllCustomers();
+		mv.addObject("customers", customers);
 		
 		
 		return mv;

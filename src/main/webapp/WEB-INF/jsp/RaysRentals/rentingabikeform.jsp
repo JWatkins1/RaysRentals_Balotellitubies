@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,58 +24,87 @@
 	href="${pageContext.request.contextPath}/img/bicycle.png"
 	type="image/png" sizes="16x16">
 
-<title>List of Bike | Rays Rentals</title>
+<title>Rent a Bike | Rays Rentals</title>
 </head>
 <body>
 	<header><jsp:directive.include
 		file="/WEB-INF/jsp/fragments/nav.jsp" /></header>
 	<h2 style="text-align: center;">Rent a Bike</h2>
-	<form class="form-horizontal" name="">
+	<form class="form-horizontal" name="rentABikeForm" method="POST" action="rental/submitrental" >
+		<!-- bike dropdown -->
 		<div class="form-group">
-			<label for="bikeId" class="col-sm-4 control-label formLabel">Select
-				a Bike</label>
+			<label for="Bike" class="col-sm-4 control-label formLabel">Available
+				Bikes</label>
 			<div class="col-md-4 col-md-offset-0">
-			<c:forEach items="availableBike" var="avB" varStatus="avBikes">
-				<select>
-					<option>${avB.id}</option>
+				<select class="form-control" name="Bike" id="Bike">
+					<option value="" disabled="" selected="">Select a Bike</option>
+					<c:forEach items="${bike}" var="bikes">
+						<option value="${bikes.id}">Name: ${bikes.name}, Version:
+							${bikes.manufacturerVersion}, Cost of Bike: £${bikes.cost}, Type:
+							${bikes.bikeType}</option>
+					</c:forEach>
 				</select>
-			</c:forEach>	
 			</div>
 		</div>
-	</form>
-	<!--  bikes list table -->
-	<div class="container" width="90%">
-		<table class="table table-bordered">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Bike Name</th>
-					<th>Manufacturer Version</th>
-					<th>Purchase Date</th>
-					<th>Cost of Bike(£)</th>
-					<th>Bike Type</th>
-					<th>Size</th>
-					<th>Status</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${bike}" var="bl">
-					<tr>
-						<td>${bl.id}</td>
-						<td>${bl.name}</td>
-						<td>${bl.manufacturerVersion}</td>
-						<td>${bl.date}</td>
-						<td>${bl.cost}</td>
-						<td>${bl.bikeType}</td>
-						<td>${bl.size}</td>
-						<td>${bl.status}</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-	</div>
-	<!-- table end -->
+		<!-- customer dropdown -->
+		<div class="form-group">
+			<label for="CustomerId" class="col-sm-4 control-label formLabel">Customers</label>
+			<div class="col-md-4 col-md-offset-0">
+				<select class="form-control" name="CustomerId" id="CustomerId">
+					<option value="" disabled="" selected="">Select a Customer</option>
+					<c:forEach items="${customers}" var="customer">
+						<option value="${customer.id}">Name: ${customer.name},
+							Email: ${customer.email}, Address: £${customer.address}, Phone
+							No.: ${customer.phoneNumber}</option>
+					</c:forEach>
+				</select>
+			</div>
+		</div>
+		<!-- rent start date -->
+		<div class="form-group">
+			<label for="StartDate" class="col-sm-4 control-label formLabel">Start
+				Date</label>
+			<div class="col-md-4 col-md-offset-0">
+				<input type="date" class="form-control" name="StartDate"
+					id="StartDate" placeholder="Start Date">
+			</div>
+		</div>
+		<!-- rent end date -->
+		<div class="form-group">
+			<label for="EndDate" class="col-sm-4 control-label formLabel">End
+				Date</label>
+			<div class="col-md-4 col-md-offset-0">
+				<input type="date" class="form-control" name="EndDate" id="EndDate">
+			</div>
+		</div>
+		<!-- cost of rental -->
+		<div class="form-group">
+			<label for="CostOfRental" class="col-sm-4 control-label formLabel">Cost
+				of Rental</label>
+			<div class="col-md-4 col-md-offset-0">
+				<div class="input-group">
+					<div class="input-group-addon">£</div>
+					<input type="number" class="form-control" name="CostOfRental"
+						id="CostOfRental" placeholder="Cost of Rental">
+				</div>
+			</div>
+		</div>
+		<!-- cost of rental -->
+		<div class="form-group">
+			<label for="CustomerPaid" class="col-sm-4 control-label formLabel">Has
+				the Customer paid?</label>
+			<div class="col-md-4 col-md-offset-0">
+				<input type="checkbox" name="CustomerPaid">
+			</div>
+		</div>
+		<!-- submit button -->
+		<div class="form-group">
+			<div style="text-align: center;">
+				<button type="submit" class="btn btn-default">Submit</button>
+			</div>
+		</div>
 
+	</form>
 	<!--  scripts for jquery and bootstrap js -->
 	<script
 		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

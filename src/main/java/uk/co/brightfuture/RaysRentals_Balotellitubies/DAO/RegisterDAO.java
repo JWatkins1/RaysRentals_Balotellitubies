@@ -5,9 +5,10 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.CustomerModel;
 import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.UserModel;
 
-public class UserDAO implements User {
+public class RegisterDAO implements Register {
 
 	@Autowired
 	@Qualifier("sessionFactory")
@@ -16,5 +17,11 @@ public class UserDAO implements User {
 	public void saveUser(UserModel userModel) {
 		Session session = sessionFactory.openSession();
 		session.save(userModel);
+	}
+
+	@Override
+	public void saveCustomer(CustomerModel customerModel) {
+		Session session = sessionFactory.openSession();
+		session.save(customerModel);
 	}
 }

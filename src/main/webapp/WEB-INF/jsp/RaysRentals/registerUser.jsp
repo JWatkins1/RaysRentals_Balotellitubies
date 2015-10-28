@@ -24,12 +24,12 @@
 	href="${pageContext.request.contextPath}/img/bicycle.png"
 	type="image/png" sizes="16x16">
 
-<title>Register | Rays Rentals</title>
+<title>Add a new User | Rays Rentals</title>
 </head>
 <body>
 	<header> <jsp:directive.include
 		file="/WEB-INF/jsp/fragments/nav.jsp" /></header>
-	<h2 style="text-align: center;">Register</h2>
+	<h2 style="text-align: center;">Add a new User</h2>
 	<form class="form-horizontal" action="register/saveUser" method="POST"
 		name="saveuserform">
 		<div class="form-group">

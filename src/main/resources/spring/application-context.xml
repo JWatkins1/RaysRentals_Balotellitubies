@@ -34,14 +34,13 @@
 	
 	<bean name="CustomerDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.CustomerDAO" />
 	<bean name="CustomerServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.CustomerServiceImpl" />
-	<bean name="CustomerController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.CustomerController" />
 	
 	<bean name="ServicingDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.ServicingDAO" />
 	<bean name="ServicingServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.ServicingServiceImpl" />
 	<bean name="ServicingController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.ServicingController" />
 	
-	<bean name="UserDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.UserDAO" />
-	<bean name="UserServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.UserServiceImpl" />
+	<bean name="RegisterDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.RegisterDAO" />
+	<bean name="RegisterServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.RegisterServiceImpl" />
 	<bean name="RegisterController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.RegisterController" />
 	
 	<bean name="RentalDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.RentalDAO" />
