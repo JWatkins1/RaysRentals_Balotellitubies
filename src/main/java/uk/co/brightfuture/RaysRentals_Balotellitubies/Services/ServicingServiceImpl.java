@@ -4,16 +4,20 @@ import java.sql.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.ServicingDAO;
 import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.ServicingModel;
 
+@Service
+@Transactional
 public class ServicingServiceImpl implements ServicingService {
-	
+
 	@Autowired
 	@Qualifier("ServicingDAO")
 	ServicingDAO servicingDAO;
-	
+
 	public void saveServicing() {
 		ServicingModel service = new ServicingModel();
 		service.setBikeId(1);

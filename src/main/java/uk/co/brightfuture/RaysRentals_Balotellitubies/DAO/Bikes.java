@@ -16,5 +16,7 @@ public interface Bikes {
 
 	public BikesModel retrieveBikeById(Long id);
 
+	public void update(BikesModel bike);
+
 	
 }
