@@ -32,6 +32,7 @@
 <property name="hbm2ddl.auto">create</property>
 
 <mapping class="uk.co.brightfuture.RaysRentals_Balotellitubies.BikesModel"/>
+<mapping class="uk.co.brightfuture.RaysRentals_Balotellitubies.RentalModel"/>
 
 <mapping class="uk.co.brightfuture.RaysRentals_Balotellitubies.CustomerModel"/>
 

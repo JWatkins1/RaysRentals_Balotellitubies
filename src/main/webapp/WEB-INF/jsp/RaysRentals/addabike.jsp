@@ -28,7 +28,7 @@
 	href="${pageContext.request.contextPath}/img/bicycle.png"
 	type="image/png" sizes="16x16">
 
-<title>Add a Bike | Rays Rentals</title>
+<title>Add a new Bike | Rays Rentals</title>
 </head>
 <body>
 	<header><jsp:directive.include
@@ -49,7 +49,7 @@
 				class="col-sm-4 control-label formLabel">Manufacturer
 				Version</label>
 			<div class="col-md-4 col-md-offset-0">
-				<input type="text" class="form-control" name="ManufacturerVersion"
+				<input type="number" class="form-control" name="ManufacturerVersion"
 					id="ManufacturerVersion" placeholder="Manufacturer Version">
 			</div>
 		</div>

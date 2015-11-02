@@ -35,7 +35,7 @@
 					class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand"
-				href="${pageContext.request.contextPath}/smvc/dashboard">Rays
+				href="${pageContext.request.contextPath}/">Rays
 				Rentals</a>
 		</div>
 
@@ -43,7 +43,15 @@
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a href="${pageContext.request.contextPath}/smvc/register">Register</a>
+				<!-- register dropdown -->
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" role="button" aria-haspopup="true"
+					aria-expanded="false">Register <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="${pageContext.request.contextPath}/smvc/newCustomer">Register a new Customer</a></li>
+						<li><a
+							href="${pageContext.request.contextPath}/smvc/register">Add a new User</a></li>
+					</ul></li>
 				<li><a href="${pageContext.request.contextPath}/smvc/dashboard">Dashboard
 				</a></li>
 				<!-- bike dropdown -->
@@ -52,21 +60,26 @@
 					aria-expanded="false">Bikes <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="${pageContext.request.contextPath}/smvc/bikes">Add
-								a New Bike</a></li>
+								a new Bike</a></li>
 						<li><a
 							href="${pageContext.request.contextPath}/smvc/bikes/listofbikes">List
 								of Bikes</a></li>
+					</ul></li>
+				<!-- rentals dropdown -->
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" role="button" aria-haspopup="true"
+					aria-expanded="false">Rentals <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="${pageContext.request.contextPath}/smvc/rental">Rent
+								a Bike</a></li>
+						<li><a
+							href="${pageContext.request.contextPath}/smvc/listofrentals">List of
+								Rentals</a></li>
 					</ul></li>
 
 				<!-- maintenance dropdown -->
 				<li><a href="#">Maintenance</a></li>
 
-				<li><a href="${pageContext.request.contextPath}/smvc/rental">Rent
-						a Bike</a></li>
-
-				<li><a
-					href="${pageContext.request.contextPath}/smvc/listofrentals">Current
-						Rentals</a></li>
 
 			</ul>
 		</div>

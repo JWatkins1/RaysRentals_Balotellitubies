@@ -34,7 +34,7 @@ public class RentalModel implements Serializable {
 	private int customer_id;
 	
 	@Column(name = "bike_reference_number")
-	private int bike_reference_number;
+	private Long bike_reference_number;
 	
 	@Column(name = "cost_of_rental")
 	private Double cost_of_rental;
@@ -68,11 +68,11 @@ public class RentalModel implements Serializable {
 		Id = id;
 	}
 
-	public int getBikeReferenceNumber() {
+	public Long getBikeReferenceNumber() {
 		return bike_reference_number;
 	}
 
-	public void setBikeReferenceNumber(int bike_reference_number) {
+	public void setBikeReferenceNumber(Long bike_reference_number) {
 		this.bike_reference_number = bike_reference_number;
 	}
 

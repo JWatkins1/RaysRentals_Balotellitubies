@@ -1,7 +1,7 @@
 package uk.co.brightfuture.RaysRentals_Balotellitubies.Services;
 
+import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.UserModel;
+
 public interface UserService {
-	
-	public void saveUser(String email, String password, String firstName, String lastName);
-	
+	public UserModel retrieveUserByEmail(String email);
 }

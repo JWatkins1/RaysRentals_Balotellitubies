@@ -56,7 +56,7 @@
 			</button>
 		</a> 
 		<!-- rented bikes dash button -->
-		<a href="#">
+		<a href="${pageContext.request.contextPath}/smvc/rental">
 			<button class="btn btn-default col-md-3 col-md-offset-1" type="submit">
 				<img alt="rentalbikeicon"
 					src="${pageContext.request.contextPath}/img/rental-icon.png"
@@ -68,7 +68,7 @@
 	
 	<div class="row" style="margin-top:20px;">
 		<!-- rented bikes list button -->
-		<a href=#">
+		<a href="${pageContext.request.contextPath}/smvc/listofrentals">
 		<button class="btn btn-default col-md-3 col-sm-offset-0" type="submit" style="margin-left:70px;">
 			<img
 				alt="rentedbikeslisticon"

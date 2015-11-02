@@ -31,9 +31,6 @@ public class CustomerModel implements Serializable {
 	@Column(name = "email")
 	private String email;
 	
-	@Column(name = "password")
-	private String password;
-	
 	@Column(name = "date_joined")
 	private Date joinDate;
 	
@@ -49,6 +46,14 @@ public class CustomerModel implements Serializable {
 	@Column(name = "number_of_rented_bikes")
 	private int rentedBikes;
 	
+	public Long getId() {
+		return Id;
+	}
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -63,14 +68,6 @@ public class CustomerModel implements Serializable {
 	
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	
-	public String getPassword() {
-		return password;
-	}
-	
-	public void setPassword(String password) {
-		this.password = password;
 	}
 	
 	public Date getJoinDate() {
