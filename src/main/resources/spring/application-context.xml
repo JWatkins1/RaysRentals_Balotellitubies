@@ -48,6 +48,13 @@
 	<bean name="RentalServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.RentalServiceImpl" />
 	<bean name="RentalsController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.RentalsController" />
 	
+	<bean name="StockDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.StockDAO" />
+	<bean name="StockServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.StockServiceImpl" />
+	<bean name="StockController" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Controller.StockController" />
+	
+	<bean name="OrdersDAO" class="uk.co.brightfuture.RaysRentals_Balotellitubies.DAO.OrdersDAO" />
+	<bean name="OrdersServiceImpl" class="uk.co.brightfuture.RaysRentals_Balotellitubies.Services.OrdersServiceImpl" />
+	
 	<bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 	
 		<property name="dataSource" ref="addressDataSource" />
