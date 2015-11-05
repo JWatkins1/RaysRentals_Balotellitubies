@@ -31,7 +31,7 @@ public class RentalModel implements Serializable {
 	private Date end_date;
 	
 	@Column(name = "customer_id")
-	private int customer_id;
+	private Long customer_id;
 	
 	@Column(name = "bike_reference_number")
 	private Long bike_reference_number;
@@ -52,11 +52,11 @@ public class RentalModel implements Serializable {
 		this.start_date = startDate;
 	}
 
-	public int getCustomerID() {
+	public Long getCustomerID() {
 		return customer_id;
 	}
 
-	public void setCustomerID(int customer_id) {
+	public void setCustomerID(Long customer_id) {
 		this.customer_id = customer_id;
 	}
 

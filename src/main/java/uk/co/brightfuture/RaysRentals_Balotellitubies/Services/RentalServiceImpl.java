@@ -24,16 +24,19 @@ public class RentalServiceImpl implements RentalService {
 	@Autowired
 	BikesDAO bikesDAO;
 
-	public void saveRental(Long bikeId, int customerId, Date startDate,
-			Date endDate, int costOfRental, Boolean customerPaid) {
+	public long costOfRental;
 
+	public void saveRental(Long bikeId, Long customerId, Date startDate,
+			Date endDate, Long costOfRental, Boolean customerPaid) {
 		RentalModel rental = new RentalModel();
 		BikesModel bike = bikesDAO.retrieveBikeById(bikeId);
 		rental.setStartDate(startDate);
 		rental.setEnd_date(endDate);
+		rental.setCostOfRental(costOfRental);
 		rental.setCustomerPaid(customerPaid);
 		rental.setBikeReferenceNumber(bikeId);
 		rental.setCustomerID(customerId);
+
 		rental.setCostOfRental(costOfRental);
 		bike.setStatus("Rented");
 		bikesDAO.update(bike);
@@ -44,4 +47,5 @@ public class RentalServiceImpl implements RentalService {
 	public List<BikesModel> retrieveAvailableBikes() {
 		return rentalDAO.retrieveAvailableBikes();
 	}
+
 }

@@ -14,6 +14,9 @@
 	href='${pageContext.request.contextPath}http://fonts.googleapis.com/css?family=Lato:400,900'
 	rel='stylesheet' type='text/css'>
 
+<link rel="stylesheet" type="text/css"
+	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
 
@@ -30,7 +33,8 @@
 	<header><jsp:directive.include
 		file="/WEB-INF/jsp/fragments/nav.jsp" /></header>
 	<h2 style="text-align: center;">Rent a Bike</h2>
-	<form class="form-horizontal" name="rentABikeForm" method="POST" action="rental/submitrental" >
+	<form class="form-horizontal" name="rentABikeForm" method="POST"
+		action="rental/submitrental">
 		<!-- bike dropdown -->
 		<div class="form-group">
 			<label for="Bike" class="col-sm-4 control-label formLabel">Available
@@ -82,11 +86,10 @@
 			<label for="CostOfRental" class="col-sm-4 control-label formLabel">Cost
 				of Rental</label>
 			<div class="col-md-4 col-md-offset-0">
-				<div class="input-group">
-					<div class="input-group-addon">£</div>
-					<input type="number" class="form-control" name="CostOfRental"
-						id="CostOfRental" placeholder="Cost of Rental">
-				</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">£</span>
+				<input class="form-control" readonly name="CostOfRental" id ="CostOfRental">
+			</div>
 			</div>
 		</div>
 		<!-- cost of rental -->
@@ -106,11 +109,26 @@
 
 	</form>
 	<!--  scripts for jquery and bootstrap js -->
+	<script>
+		var startDate = document.getElementById('StartDate'), endDate = document
+				.getElementById('EndDate'), costOfRental = document
+				.getElementById('CostOfRental');
+
+		var trigFunc = function() {
+			var diffDays = Math.round(Math.abs(Date.parse(endDate.value)
+					- Date.parse(startDate.value)))
+					/ 1000 / 60 / 60 / 24;
+			/*daily price is 12*/
+			var result = diffDays * 12;
+			costOfRental.value = !isNaN(result) ? result : 'N/A';
+		}
+
+		startDate.onchange = trigFunc;
+		endDate.onchange = trigFunc;
+	</script>
 	<script
 		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script
 		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css"
-		href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </body>
 </html>

@@ -7,10 +7,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
 
 import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.BikesModel;
 import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.CustomerModel;
 
+@Repository(value = "customerDAO")
 public class CustomerDAO implements Customer {
 
 	@Autowired
@@ -31,6 +33,19 @@ public class CustomerDAO implements Customer {
 		List<CustomerModel> customers = criteria.list();
 		return customers;
 	
+	}
+
+	@Override
+	public CustomerModel getCustomerById(Long Id) {
+		return (CustomerModel) sessionFactory.getCurrentSession().load(CustomerModel.class,
+				Id);
+	}
+
+	@Override
+	public void update(CustomerModel customer) {
+		Session session = sessionFactory.getCurrentSession();
+		session.update(customer);
+		
 	}
 
 

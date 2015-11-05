@@ -7,7 +7,7 @@ import uk.co.brightfuture.RaysRentals_Balotellitubies.Model.BikesModel;
 
 public interface RentalService {
 
-		public void saveRental(Long bikeId, int customerId, Date startDate, Date endDate, int costOfRental, Boolean customerPaid);
+		public void saveRental(Long bikeId, Long customerId, Date startDate, Date endDate, Long costOfRental, Boolean customerPaid);
 		
 		public List<BikesModel> retrieveAvailableBikes();
 }

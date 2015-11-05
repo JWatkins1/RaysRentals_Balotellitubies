@@ -49,15 +49,15 @@ public class RentalsController {
 	@RequestMapping("/rental/submitrental")
 	public ModelAndView rentABike(
 			@RequestParam("Bike") Long bikeId,
-			@RequestParam("CustomerId") int customerId,
+			@RequestParam("CustomerId") Long customerId,
 			@RequestParam("StartDate") @DateTimeFormat(pattern = "yyyy-MM-dd") Date startDate,
 			@RequestParam("EndDate") @DateTimeFormat(pattern = "yyyy-MM-dd") Date endDate,
-			@RequestParam("CostOfRental") int costOfRental,
-			@RequestParam(required=false, value="CustomerPaid") Boolean customerPaid) {
+			@RequestParam("CostOfRental")Long costOfRental,
+			@RequestParam(required = false, value = "CustomerPaid") Boolean customerPaid) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("RaysRentals/rentingabikeform");
-		rentalService.saveRental(bikeId, customerId, startDate, endDate,
-				costOfRental, customerPaid);
+		rentalService.saveRental(bikeId, customerId, startDate, endDate, costOfRental,
+				customerPaid);
 		List<BikesModel> bike = rentalService.retrieveAvailableBikes();
 		mv.addObject("bike", bike);
 		mv.setViewName("RaysRentals/rentingabikeform");
